@@ -13,13 +13,20 @@ int main(void)
 
 	while (n1 <= 9)
 	{
-		putchar(n1 + '0');
-		n2 = n1 + 1;
+		n2 = 0;
 		while (n2 <= 9)
 		{
-			putchar(n2 + '0');
-			putchar(',');
-			putchar(' ');
+			if (n1 != n2 && n1 < n2)
+			{
+				putchar(n1 + 48);
+				putchar(n2 + 48);
+				if (n1 + n2 != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			n2++;
 		}
 		n1++;
 	}
