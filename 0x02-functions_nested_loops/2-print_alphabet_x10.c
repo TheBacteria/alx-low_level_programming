@@ -4,7 +4,7 @@
  *
  * Description: printing the alphabets 10 times
 */
-void print_alphabets_10x(void)
+void print_alphabet_10x(void)
 {
 	int x, az;
 
