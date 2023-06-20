@@ -5,7 +5,7 @@
  * Description: printing the alphabets using _putchar
 */
 
-void print_alphabets(void)
+void print_alphabet(void)
 {
 	int az;
 
