@@ -1,5 +1,9 @@
 #include "main.h"
-/***/
+/**
+ * rev_string - prints a string in reverse
+ *
+ * @s: the string to print
+*/
 void rev_string(char *s)
 {
 	int a, b;
