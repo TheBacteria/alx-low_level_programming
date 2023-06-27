@@ -6,9 +6,9 @@ void rev_string(char *s)
 
 	char c;
 
-	for (a = 0; s[l] != '\0'; ++a)
+	for (a = 0; s[a] != '\0'; ++a)
 		;
-	for (b = 0; b < l / 2; b++)
+	for (b = 0; b < a / 2; b++)
 	{
 		c = s[b];
 		s[b] = s[a - 1 - b];
