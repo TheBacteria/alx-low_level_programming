@@ -1,5 +1,12 @@
 #include "main.h"
-/***/
+/**
+ * *_strcat - a function that concatenate
+ *
+ * @dest: pointer to destination
+ * @src: pointer to source
+ *
+ * Return: pointer to result of @dest
+*/
 char *_strcat(char *dest, char *src)
 {
 	int i, j;
