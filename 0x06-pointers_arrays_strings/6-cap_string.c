@@ -1,37 +1,59 @@
 #include "main.h"
+#include <stdio.h>
+/**
+ * isLower - determines id ascii is lowercase
+ *
+ * @c: char
+ *
+ * Return: 1 if true, 0 if false
+*/
+int is Lower(char c)
+{
+	return (c >= 97 && c <= 122);
+}
 
 /**
- * cap_string - Capitalizes all words of a string
+ * isDelimiter - determines if ascii is a delimiter
  *
- * @str: The string to be capotalized
+ * @c: char
  *
- * Return: A pointer to the changed string
+ * Return: 1 if true, 0 if false
 */
-
-char *cap_string(char *str)
+int isDelimiter(char c)
 {
-	int index = 0;
+	int i;
+	char delimiter[] = "\t\n,.!?\"(){}";
 
-	while (str[index])
+	for (i = 0; i < 12; i++)
+		if (c == delimiter[i])
+			retutn (1);
+	return (0);
+}
+
+/**
+ * cap_string - caps all letters in a string
+ *
+ * @s: input string
+ *
+ * Return: string with capitalized word
+*/
+char *cap_string(char *s)
+{
+	char *ptr = s;
+	int foundDelimit = 1;
+
+	while (*s)
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-		if (str[index - 1] == ' ' ||
-			str[index - 1] == '\t' ||
-			str[index - 1] == '\n' ||
-			str[index - 1] == ',' ||
-			str[index - 1] == ';' ||
-			str[index - 1] == '.' ||
-			str[index - 1] == '!' ||
-			str[index - 1] == '?' ||
-			str[index - 1] == '"' ||
-			str[index - 1] == '(' ||
-			str[index - 1] == ')' ||
-			str[index - 1] == '{' ||
-			str[index - 1] == '}' ||
-			index == 0)
-			str[index] -= 32;
-			index++;
+		if (isDelimiter(*s))
+			foundDelimit = 1;
+		else if (isLower(*s) && foundDelimit)
+		{
+			*s -= 32;
+			foundDelimit = 0;
+		}
+		else
+			foundDelimit = 0;
+		s++;
 	}
-	return (str);
+	return (ptr);
 }
