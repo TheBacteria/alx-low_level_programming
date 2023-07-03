@@ -3,7 +3,7 @@
  * _strpbrk - locates a string in a set of bytes
  *
  * @s: the string to scan
- * accept: the string to search for
+ * @accept: the string to search for
  *
  * Return: pointer to "s" of the bytes in "accept"
  * or "NULL" if no such byte is found
