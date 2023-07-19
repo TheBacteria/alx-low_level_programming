@@ -9,21 +9,21 @@
 */
 int _strlen(const char *str)
 {
-	int len = 0;
+	int length = 0;
 
 	while (*str++)
-		len++;
-	return (len);
+		length++;
+	return (length);
 }
 /**
- * *strcopy - a function that copies a string
+ * _strcopy - a function that copies a string
  *
  * @src: the string to copy
  * @dest: destination
  *
  * Return: @dest
 */
-char *strcopy(char *dest, char *src)
+char *_strcopy(char *dest, char *src)
 {
 	int i;
 
