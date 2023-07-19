@@ -16,9 +16,9 @@ int _strlen(const char *str)
 	return (len);
 }
 /**
- * _strcopy - a function that copies a string
+ * *strcopy - a function that copies a string
  *
- * @str: the string to copy
+ * @src: the string to copy
  * @dest: destination
  *
  * Return: @dest
@@ -27,7 +27,7 @@ char *strcopy(char *dest, char *src)
 {
 	int i;
 
-	for (i = 0; src [i]; i++)
+	for (i = 0; src[i]; i++)
 		dest[i] = src[i];
 	dest[i] = '\0';
 	return (dest);
@@ -41,7 +41,7 @@ char *strcopy(char *dest, char *src)
  *
  * Return: struct pointer dog or NULL if it fails
 */
-dog_t *new_dog (char *name, float age, char *owner)
+dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
 
