@@ -1,0 +1,5 @@
+#!/bin/bash                                                                                                    
+
+cd ~/alx-low_level_programming/
+./git
+cd ~/alx-low_level_programming/0x12-singly_linked_lists/
